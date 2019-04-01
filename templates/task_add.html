@@ -34,8 +34,7 @@
 </header>
 
 <div class="get" id="info">
-    <!--<div align="center" id="loading"><img src="http://qiniu.tomxin.cn/blog/20190103/L0lqKFXdiFrQ.gif" style="height: 30px;" ></div>-->
-    <!--<p>  亲爱的：tomxin7 你的任务:【福州 - 亚太，鼓楼】</p><p> 在 2019.1.30 19.03 监控到以下房源</p>-->
+   
 
     <div class="remind"> 风险提醒：以下内容来自互联网，未经验证，请自行甄别，谨防受骗</div>
 
@@ -54,8 +53,8 @@
                             <legend>添加任务</legend>
 
                             <div class="am-form-group">
-                                <label for="doc-ipt-email-1">任务描述</label>
-                                <input type="text" class="" id="doc-ipt-email-1" placeholder="任务描述" name="desc">
+                                <label for="doc-ipt-email-1">提醒内容</label>
+                                <input type="text" class="" id="doc-ipt-email-1" placeholder="打飞机" name="desc">
                             </div>
 
                             <div class="am-form-group">
@@ -65,10 +64,36 @@
                             </div>
 
                             <div class="am-form-group">
-                                <label for="frequency">推送频率</label>
-                                <input type="text" class="" id="frequency" placeholder="每个多长时间推送一次(时间单位为分钟，至少10分钟)"
-                                       name="frequency">
+                                <label for="hours">hours</label>
+                                <input type="text" class="" id="hours" placeholder="hours"
+                                       name="hours">
                             </div>
+                            <div class="am-form-group">
+                                <label for="day_of_week">day_of_week</label>
+                                <input type="text" class="" value="mon-fri" id="day_of_week" placeholder="day_of_week"
+                                       name="day_of_week">
+                            </div>
+                            <div class="am-form-group">
+                                <label for="start_date">start_date</label>
+                                <input type="text" class="" id="start_date" placeholder="start_date"
+                                       name="start_date">
+                            </div>
+                            <div class="am-form-group">
+                                <label for="minute">minute</label>
+                                <input type="text" class="" id="minute" placeholder="minute"
+                                       name="minute">
+                            </div>                            
+                            <div class="am-form-group">
+                                <label for="end_date">end_date</label>
+                                <input type="text" class="" id="end_date" placeholder="end_date"
+                                       name="end_date">
+                            </div>                                
+                            <div class="am-form-group">
+                                <label for="frequency">frequency</label>
+                                <input type="text" class="" value ='1' id="frequency" placeholder="frequency"
+                                       name="frequency">
+                            </div>                            
+
 
                             <div class="am-form-group">
                                 <label for="wx_user_id">微信推送id(<a href="https://docs.qq.com/doc/DQ01hQVNDbE51dHli"
