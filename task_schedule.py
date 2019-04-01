@@ -18,7 +18,7 @@ from utils.LogHandler import log
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost:3306/app?charset=utf8mb4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://app:app123456@localhost:3306/app?charset=utf8mb4'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config['SECRET_KEY'] = '123456'
 login_manager = LoginManager()
@@ -320,7 +320,7 @@ def jobfromparm(**jobargs):
 class Config(object):
     JOBS = []
     SCHEDULER_JOBSTORES = {
-        'default': SQLAlchemyJobStore(url='mysql+pymysql://root:root@localhost:3306/app?charset=utf8mb4')
+        'default': SQLAlchemyJobStore(url='mysql+pymysql://app:app123456@localhost:3306/app?charset=utf8mb4')
     }
 
     SCHEDULER_EXECUTORS = {
