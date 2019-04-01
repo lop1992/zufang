@@ -3,7 +3,7 @@ from flask_login import UserMixin, LoginManager, AnonymousUserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost:3306/house?charset=utf8mb4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://app:app123456@localhost:3306/app?charset=utf8mb4'
 db = SQLAlchemy(app)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
@@ -57,6 +57,13 @@ class Job(db.Model):
     city = db.Column(db.String(50))
     status = db.Column(db.String(10))
     frequency = db.Column(db.Integer)
+    
+    hours = db.Column(db.Integer)
+    day_of_week = db.Column(db.String(300))
+    start_date  = db.Column(db.String(300))
+    end_date   = db.Column(db.String(300))
+    minute   = db.Column(db.Integer)
+    
     job_id = db.Column(db.String(30))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'),
                         nullable=False)
